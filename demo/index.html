@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo: Treeview</title>
+
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="../build/globals/treeview.css">
+
+	<script src="../build/globals/treeview.js"></script>
+</head>
+<body>
+	<h1>Treeview</h1>
+	<script type="text/javascript">
+		new metal.Treeview({
+			nodes: [
+				{
+					name: 'Movies',
+					children: [
+						{
+							name: 'The Hunt',
+							children: [
+								{name: 'year: 2012'},
+								{name: 'director: Thomas Vinterberg'}
+							]
+						},
+						{
+							name: 'Wild Tales',
+							children: [
+								{name: 'year: 2015'},
+								{name: 'director: Damián Szifron'}
+							],
+							expanded: true
+						}
+					],
+					expanded: true
+				}
+			]
+		});
+	</script>
+</body>
+</html>
