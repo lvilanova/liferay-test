@@ -84,7 +84,7 @@ button {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		button{
+		.check-item{
 			position: relative;
 			top: 43px;
 			left: 20px;
@@ -94,6 +94,12 @@ button {
 			svg{
 				font-size: 25px;
 			}
+		}
+		.delete-item{
+			float: right;
+			bottom: 40px;
+			position: relative;
+			right: 20px;
 		}
 	}
 	li{

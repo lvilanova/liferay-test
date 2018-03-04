@@ -9,8 +9,12 @@ class TodoItem extends JSXComponent {
 	render() {
 		let elementClasses = `todo-item${this.props.todo.done ? ' todo-item-done' : ''}`;
 		let checkClass = `${this.props.todo.done ? ' fas fa-check-circle' : 'far fa-check-circle'}`;
+		//let removeElement = `${this.props.todo.done ? ' fas fa-check-circle' : 'far fa-check-circle'}`;
+
+		
 		return [
 			<button
+				class="check-item"
 				data-onclick={this.handleClick.bind(this)}
 				>
 					<i 
@@ -21,7 +25,15 @@ class TodoItem extends JSXComponent {
 				class={elementClasses}
 			>
 				{this.props.todo.title}
-			</li>
+			</li>,
+			<button
+				class="delete-item"
+				data-onclick={this.handleRemoveElement.bind(this)}
+			>
+				<i 
+					class="fa fa-trash">
+				</i>
+			</button>,
 				
 		];
 	}
@@ -30,6 +42,10 @@ class TodoItem extends JSXComponent {
 		this.emit('todoClick', {
 			index: this.props.index
 		});
+	}
+
+	handleRemoveElement(event){
+		alert("hey man!");
 	}
 	
 }
