@@ -2,6 +2,7 @@
 
 import JSXComponent from 'metal-jsx';
 
+
 class TodoItem extends JSXComponent {
 	render() {
 		let elementClasses = `todo-item${this.props.todo.done ? ' todo-item-done' : ''}`;
@@ -13,6 +14,8 @@ class TodoItem extends JSXComponent {
 			>
 				{this.props.todo.title}
 			</li>
+			
+
 		);
 	}
 
@@ -22,6 +25,7 @@ class TodoItem extends JSXComponent {
 		});
 	}
 }
+
 
 TodoItem.PROPS = {
 	index: {

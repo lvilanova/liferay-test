@@ -4,6 +4,8 @@ import JSXComponent from 'metal-jsx';
 
 import TodoForm from './TodoForm';
 import TodoItem from './TodoItem';
+import TodoButton from './TodoButton';
+
 
 import '../../todo.scss';
 
@@ -24,6 +26,7 @@ class TodoApp extends JSXComponent {
 						);
 					})}
 				</ul>
+
 
 				<TodoForm
 					events={{
@@ -66,11 +69,11 @@ TodoApp.STATE = {
 		value: [
 			{
 				done: false,
-				title: 'Todo 1'
+				title: 'Get up!'
 			},
 			{
 				done: false,
-				title: 'Todo 2'
+				title: 'Make the app'
 			}
 		]
 	}
