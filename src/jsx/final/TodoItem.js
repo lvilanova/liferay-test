@@ -45,8 +45,11 @@ class TodoItem extends JSXComponent {
 	}
 
 	handleRemoveElement(event){
-		alert("hey man!");
+		return function(){
+			alert("asdasd");
+		}
 	}
+
 	
 }
 

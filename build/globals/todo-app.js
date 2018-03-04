@@ -3139,7 +3139,9 @@ class TodoItem extends jsx_default.a {
 	}
 
 	handleRemoveElement(event) {
-		alert("hey man!");
+		return function () {
+			alert("asdasd");
+		};
 	}
 
 }

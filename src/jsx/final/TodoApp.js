@@ -17,7 +17,7 @@ class TodoApp extends JSXComponent {
 						return (
 							<TodoItem
 								events={{
-									todoClick: this.handleTodoClick.bind(this)
+									todoClick: this.handleTodoClick.bind(this),
 								}}
 								index={index}
 								todo={todo}
