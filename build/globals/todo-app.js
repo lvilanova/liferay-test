@@ -3082,7 +3082,28 @@ TodoForm.STATE = {
 
 
 /* harmony default export */ var final_TodoForm = (TodoForm);
+// CONCATENATED MODULE: ./src/jsx/final/TodoButton.js
+
+
+
+
+class TodoButton extends jsx_default.a {
+    render() {
+        IncrementalDOM.elementOpen('span');
+        IncrementalDOM.elementOpen('i', null, null, 'class', 'fa fa-trash');
+        IncrementalDOM.elementClose('i');
+        return IncrementalDOM.elementClose('span');
+    }
+
+    handleClick(event) {
+        event.preventDefault();
+    }
+}
+
+
+/* harmony default export */ var final_TodoButton = (TodoButton);
 // CONCATENATED MODULE: ./src/jsx/final/TodoItem.js
+
 
 
 
@@ -3091,9 +3112,16 @@ class TodoItem extends jsx_default.a {
 	render() {
 		let elementClasses = `todo-item${this.props.todo.done ? ' todo-item-done' : ''}`;
 
-		IncrementalDOM.elementOpen('li', null, null, 'class', elementClasses, 'data-onclick', this.handleClick.bind(this));
-		iDOMHelpers.renderArbitrary(this.props.todo.title);
-		return IncrementalDOM.elementClose('li');
+		return [iDOMHelpers.jsxWrapper(function (_handleClick$bind) {
+			IncrementalDOM.elementOpen('button', null, null, 'data-onclick', _handleClick$bind);
+			IncrementalDOM.elementOpen('i', null, null, 'class', 'fa fa-check-circle');
+			IncrementalDOM.elementClose('i');
+			return IncrementalDOM.elementClose('button');
+		}, [this.handleClick.bind(this)]), iDOMHelpers.jsxWrapper(function (_elementClasses, _props$todo$title) {
+			IncrementalDOM.elementOpen('li', null, null, 'class', _elementClasses);
+			iDOMHelpers.renderArbitrary(_props$todo$title);
+			return IncrementalDOM.elementClose('li');
+		}, [elementClasses, this.props.todo.title])];
 	}
 
 	handleClick(event) {
@@ -3115,29 +3143,12 @@ TodoItem.PROPS = {
 
 
 /* harmony default export */ var final_TodoItem = (TodoItem);
-// CONCATENATED MODULE: ./src/jsx/final/TodoButton.js
-
-
-
-
-class TodoButton extends jsx_default.a {
-	render() {
-		IncrementalDOM.elementOpen('p');
-		IncrementalDOM.text('Hola bot\xF3n');
-		return IncrementalDOM.elementClose('p');
-	}
-
-	handleClick(event) {}
-}
-
-/* harmony default export */ var final_TodoButton = (TodoButton);
 // EXTERNAL MODULE: ./src/todo.scss
 var src_todo = __webpack_require__(63);
 var todo_default = /*#__PURE__*/__webpack_require__.n(src_todo);
 
 // CONCATENATED MODULE: ./src/jsx/final/TodoApp.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TodoApp", function() { return TodoApp_TodoApp; });
-
 
 
 
@@ -12327,7 +12338,7 @@ exports = module.exports = __webpack_require__(65)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  line-height: 1.4em;\n  background: #f5f5f5;\n  color: #4d4d4d;\n  min-width: 230px;\n  max-width: 550px;\n  margin: 0 auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  font-weight: 300; }\n\nbutton {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  background: none;\n  font-size: 100%;\n  vertical-align: baseline;\n  font-family: inherit;\n  font-weight: inherit;\n  color: inherit;\n  -webkit-appearance: none;\n  appearance: none;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased; }\n\n.title {\n  padding-top: 40px; }\n\n.todo {\n  background: #fff;\n  margin: 40px 0 40px 0;\n  position: relative;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1); }\n  .todo input::-webkit-input-placeholder, .todo input::-moz-placeholder, .todo input::input-placeholder {\n    font-style: italic;\n    font-weight: 300;\n    color: #e6e6e6; }\n\n.todo-form, .todo-list {\n  padding: 20px; }\n\n.todo-item {\n  font-weight: 600; }\n  .todo-item.destroy {\n    display: none;\n    position: absolute;\n    top: 0;\n    right: 10px;\n    bottom: 0;\n    width: 40px;\n    height: 40px;\n    margin: auto 0;\n    font-size: 30px;\n    color: #cc9a9a;\n    margin-bottom: 11px;\n    transition: color 0.2s ease-out; }\n  .todo-item.todo-item-done {\n    text-decoration: line-through;\n    font-weight: 300; }\n\n.todo ul {\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\n.todo li {\n  position: relative;\n  font-size: 24px;\n  border-bottom: 1px solid #ededed;\n  white-space: pre-line;\n  word-break: break-all;\n  padding: 15px 60px 15px 15px;\n  margin-left: 45px;\n  display: block;\n  line-height: 1.2;\n  transition: color 0.4s; }\n\n.todo-form input {\n  width: 60%;\n  font-size: 24px;\n  font-weight: 300;\n  color: #a9b2b9;\n  margin-left: 45px;\n  padding: 16px;\n  border: none;\n  background: rgba(0, 0, 0, 0.003);\n  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);\n  outline-color: #a9b2b9;\n  outline-width: 1px; }\n\n.todo-form button {\n  float: right;\n  margin-top: 16px;\n  cursor: pointer;\n  color: #fff;\n  background-color: #a9b2b9;\n  border-color: #a9b2b9;\n  display: inline-block;\n  display: inline-block;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  border: 1px solid transparent;\n  padding: .375rem .75rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  border-radius: .25rem;\n  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }\n  .todo-form button:hover {\n    color: #fff;\n    background-color: #5a6268;\n    border-color: #545b62; }\n", ""]);
+exports.push([module.i, "body {\n  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  line-height: 1.4em;\n  background: #f5f5f5;\n  color: #4d4d4d;\n  min-width: 230px;\n  max-width: 550px;\n  margin: 0 auto;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased;\n  font-weight: 300; }\n\nbutton {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  background: none;\n  font-size: 100%;\n  vertical-align: baseline;\n  font-family: inherit;\n  font-weight: inherit;\n  color: inherit;\n  -webkit-appearance: none;\n  appearance: none;\n  -webkit-font-smoothing: antialiased;\n  -moz-font-smoothing: antialiased;\n  font-smoothing: antialiased; }\n\n.title {\n  padding-top: 40px; }\n\n.todo {\n  background: #fff;\n  margin: 40px 0 40px 0;\n  position: relative;\n  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1); }\n  .todo input::-webkit-input-placeholder, .todo input::-moz-placeholder, .todo input::input-placeholder {\n    font-style: italic;\n    font-weight: 300;\n    color: #e6e6e6; }\n\n.todo-form, .todo-list {\n  padding: 20px; }\n\n.todo-item {\n  font-weight: 600; }\n  .todo-item.destroy {\n    display: none;\n    position: absolute;\n    top: 0;\n    right: 10px;\n    bottom: 0;\n    width: 40px;\n    height: 40px;\n    margin: auto 0;\n    font-size: 30px;\n    color: #cc9a9a;\n    margin-bottom: 11px;\n    transition: color 0.2s ease-out; }\n  .todo-item.todo-item-done {\n    text-decoration: line-through;\n    font-weight: 300; }\n  .todo-item button {\n    float: right; }\n\n.todo ul {\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n  .todo ul button {\n    position: relative;\n    top: 43px;\n    left: 20px; }\n    .todo ul button i {\n      font-size: 25px; }\n\n.todo li {\n  position: relative;\n  font-size: 24px;\n  border-bottom: 1px solid #ededed;\n  white-space: pre-line;\n  word-break: break-all;\n  padding: 15px 60px 15px 15px;\n  margin-left: 45px;\n  display: block;\n  line-height: 1.2;\n  transition: color 0.4s; }\n\n.todo-form input {\n  width: 60%;\n  font-size: 24px;\n  font-weight: 300;\n  color: #a9b2b9;\n  margin-left: 45px;\n  padding: 16px;\n  border: none;\n  background: rgba(0, 0, 0, 0.003);\n  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);\n  outline-color: #a9b2b9;\n  outline-width: 1px; }\n\n.todo-form button {\n  float: right;\n  margin-top: 16px;\n  cursor: pointer;\n  color: #fff;\n  background-color: #a9b2b9;\n  border-color: #a9b2b9;\n  display: inline-block;\n  display: inline-block;\n  font-weight: 400;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  border: 1px solid transparent;\n  padding: .375rem .75rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  border-radius: .25rem;\n  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }\n  .todo-form button:hover {\n    color: #fff;\n    background-color: #5a6268;\n    border-color: #545b62; }\n", ""]);
 
 // exports
 

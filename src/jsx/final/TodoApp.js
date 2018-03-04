@@ -4,7 +4,6 @@ import JSXComponent from 'metal-jsx';
 
 import TodoForm from './TodoForm';
 import TodoItem from './TodoItem';
-import TodoButton from './TodoButton';
 
 
 import '../../todo.scss';
@@ -26,8 +25,7 @@ class TodoApp extends JSXComponent {
 						);
 					})}
 				</ul>
-
-
+				
 				<TodoForm
 					events={{
 						todoAdd: this.handleTodoAdd.bind(this)

@@ -1,22 +1,29 @@
 'use strict';
 
 import JSXComponent from 'metal-jsx';
+import TodoButton from './TodoButton';
+
 
 
 class TodoItem extends JSXComponent {
 	render() {
 		let elementClasses = `todo-item${this.props.todo.done ? ' todo-item-done' : ''}`;
 
-		return (
+		return [
+			<button
+				data-onclick={this.handleClick.bind(this)}
+				>
+					<i class="fa fa-check-circle"></i>
+				</button>,
 			<li
 				class={elementClasses}
-				data-onclick={this.handleClick.bind(this)}
 			>
 				{this.props.todo.title}
-			</li>
+				
 			
-
-		);
+			</li>
+				
+		];
 	}
 
 	handleClick(event) {
@@ -39,3 +46,4 @@ TodoItem.PROPS = {
 
 export {TodoItem}
 export default TodoItem;
+

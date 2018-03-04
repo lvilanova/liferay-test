@@ -74,6 +74,9 @@ button {
 		text-decoration: line-through;
 		font-weight: 300;
 	  }
+	  button{
+		  float:right;
+	  }
 }
 
 .todo {
@@ -81,6 +84,14 @@ button {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		button{
+			position: relative;
+			top: 43px;
+			left: 20px;
+			i{
+				font-size: 25px;
+			}
+		}
 	}
 	li{
 		position: relative;

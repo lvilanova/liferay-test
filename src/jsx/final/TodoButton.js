@@ -5,15 +5,17 @@ import JSXComponent from 'metal-jsx';
 class TodoButton extends JSXComponent {
 	render() {
         return(
-
-            <p>Hola botón</p>
-
-        );
+            <span>
+                <i class="fa fa-trash"></i>
+            </span>
+         );
 	}
 
 	handleClick(event) {
-		
+        event.preventDefault();
+
 	}
 }
 
+export {TodoButton}
 export default TodoButton;
