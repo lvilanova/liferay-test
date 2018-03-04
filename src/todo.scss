@@ -88,7 +88,10 @@ button {
 			position: relative;
 			top: 43px;
 			left: 20px;
-			i{
+			&:focus{
+				outline:none;
+			}
+			svg{
 				font-size: 25px;
 			}
 		}
