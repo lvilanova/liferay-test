@@ -1,32 +1,48 @@
 {
-  "name": "liferay-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "gulp": "^3.9.1",
-    "metal": "^2.16.2",
-    "metal-component": "^2.16.3",
-    "metal-dom": "^2.16.2",
-    "metal-events": "^2.16.2",
-    "metal-keyboard-focus": "^2.0.1",
-    "metal-soy": "^2.16.4",
-    "node-sass": "^4.7.2",
-    "webpack": "^4.0.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lvilanova/liferay-test.git"
-  },
-  "author": "LVilanova",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lvilanova/liferay-test/issues"
-  },
-  "homepage": "https://github.com/lvilanova/liferay-test#readme"
+	"name": "liferay-frontend-test",
+	"private": true,
+	"description": "TODO with metal.js",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "src/jsx/TodoApp.js",
+	"jsnext:main": "src/jsx/TodoApp.js",
+	"files": [
+		"src"
+	],
+	"scripts": {
+		"build": "npm run build:jsx",
+		"build:jsx:final": "webpack --config webpack.config.jsx.js --entry ./src/jsx/final/TodoApp.js"
+	},
+	"dependencies": {
+		"jshint": "^2.9.5",
+		"metal-jsx": "^2.14.1"
+	},
+	"devDependencies": {
+		"babel-core": "^6.25.0",
+		"babel-loader": "^7.0.0",
+		"babel-preset-metal": "^4.0.0",
+		"babel-preset-metal-jsx": "^0.1.1",
+		"css-loader": "^0.28.4",
+		"eslint-config-liferay": "^2.0.11",
+		"http-server": "^0.9.0",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^20.0.4",
+		"metal-jest-serializer": "^1.0.1",
+		"metal-lerna-jest-resolver": "^1.0.0",
+		"node-sass": "^4.5.3",
+		"sass-loader": "^6.0.6",
+		"style-loader": "^0.18.2",
+		"webpack": "^3.0.0"
+	},
+	"jest": {
+		"resolver": "metal-lerna-jest-resolver",
+		"snapshotSerializers": [
+			"metal-jest-serializer"
+		],
+		"moduleNameMapper": {
+			"^.+\\.scss$": "identity-obj-proxy"
+		}
+	}
 }
