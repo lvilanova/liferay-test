@@ -1,8 +1,6 @@
 'use strict';
 
 import JSXComponent from 'metal-jsx';
-import TodoButton from './TodoButton';
-
 
 
 class TodoItem extends JSXComponent {
@@ -45,13 +43,11 @@ class TodoItem extends JSXComponent {
 	}
 
 	handleRemoveElement(event){
-		return function(){
-			alert("asdasd");
-		}
+		alert("remove element not finished yet!");
 	}
-
 	
 }
+
 
 
 TodoItem.PROPS = {

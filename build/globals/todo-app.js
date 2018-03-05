@@ -284,36 +284,6 @@ exports.ComponentRenderer = _ComponentRenderer2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.JSXComponent = exports.Config = exports.validators = exports.DangerouslySetHTML = undefined;
-
-var _metalState = __webpack_require__(6);
-
-var _DangerouslySetHTML = __webpack_require__(42);
-
-var _DangerouslySetHTML2 = _interopRequireDefault(_DangerouslySetHTML);
-
-var _JSXComponent = __webpack_require__(16);
-
-var _JSXComponent2 = _interopRequireDefault(_JSXComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _JSXComponent2.default;
-exports.DangerouslySetHTML = _DangerouslySetHTML2.default;
-exports.validators = _metalState.validators;
-exports.Config = _metalState.Config;
-exports.JSXComponent = _JSXComponent2.default;
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.State = exports.Config = exports.validators = undefined;
 
 var _validators = __webpack_require__(13);
@@ -336,7 +306,7 @@ exports.Config = _Config2.default;
 exports.State = _State2.default;
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -396,6 +366,36 @@ exports.features = _features2.default;
 exports.globalEval = _globalEval2.default;
 exports.globalEvalStyles = _globalEvalStyles2.default;
 exports.default = _dom2.default;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.JSXComponent = exports.Config = exports.validators = exports.DangerouslySetHTML = undefined;
+
+var _metalState = __webpack_require__(5);
+
+var _DangerouslySetHTML = __webpack_require__(42);
+
+var _DangerouslySetHTML2 = _interopRequireDefault(_DangerouslySetHTML);
+
+var _JSXComponent = __webpack_require__(16);
+
+var _JSXComponent2 = _interopRequireDefault(_JSXComponent);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _JSXComponent2.default;
+exports.DangerouslySetHTML = _DangerouslySetHTML2.default;
+exports.validators = _metalState.validators;
+exports.Config = _metalState.Config;
+exports.JSXComponent = _JSXComponent2.default;
 
 /***/ }),
 /* 8 */
@@ -1897,7 +1897,7 @@ var _children = __webpack_require__(19);
 
 var _changes = __webpack_require__(18);
 
-var _metalDom = __webpack_require__(7);
+var _metalDom = __webpack_require__(6);
 
 var _data = __webpack_require__(3);
 
@@ -2578,7 +2578,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _metal = __webpack_require__(0);
 
-var _metalState = __webpack_require__(6);
+var _metalState = __webpack_require__(5);
 
 var _metalState2 = _interopRequireDefault(_metalState);
 
@@ -3037,7 +3037,7 @@ exports.default = jsxRenderer_;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // EXTERNAL MODULE: ./node_modules/metal-jsx/lib/all/jsx.js
-var jsx = __webpack_require__(5);
+var jsx = __webpack_require__(7);
 var jsx_default = /*#__PURE__*/__webpack_require__.n(jsx);
 
 // CONCATENATED MODULE: ./src/jsx/final/TodoForm.js
@@ -3082,28 +3082,7 @@ TodoForm.STATE = {
 
 
 /* harmony default export */ var final_TodoForm = (TodoForm);
-// CONCATENATED MODULE: ./src/jsx/final/TodoButton.js
-
-
-
-
-class TodoButton extends jsx_default.a {
-    render() {
-        IncrementalDOM.elementOpen('span');
-        IncrementalDOM.elementOpen('i', null, null, 'class', 'fa fa-trash');
-        IncrementalDOM.elementClose('i');
-        return IncrementalDOM.elementClose('span');
-    }
-
-    handleClick(event) {
-        event.preventDefault();
-    }
-}
-
-
-/* harmony default export */ var final_TodoButton = (TodoButton);
 // CONCATENATED MODULE: ./src/jsx/final/TodoItem.js
-
 
 
 
@@ -3139,9 +3118,7 @@ class TodoItem extends jsx_default.a {
 	}
 
 	handleRemoveElement(event) {
-		return function () {
-			alert("asdasd");
-		};
+		alert("remove element not finished yet!");
 	}
 
 }
@@ -6548,7 +6525,7 @@ var _JSXComponent = __webpack_require__(16);
 
 var _JSXComponent2 = _interopRequireDefault(_JSXComponent);
 
-var _metalState = __webpack_require__(6);
+var _metalState = __webpack_require__(5);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9191,7 +9168,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.getPatchingComponent = getPatchingComponent;
 exports.patch = patch;
 
-var _metalDom = __webpack_require__(7);
+var _metalDom = __webpack_require__(6);
 
 var _data = __webpack_require__(3);
 
@@ -10754,7 +10731,7 @@ exports.convertListenerNamesToFns = convertListenerNamesToFns;
 
 var _metal = __webpack_require__(0);
 
-var _metalDom = __webpack_require__(7);
+var _metalDom = __webpack_require__(6);
 
 var _metalComponent = __webpack_require__(4);
 
@@ -10949,7 +10926,7 @@ var _metal = __webpack_require__(0);
 
 var _sync = __webpack_require__(59);
 
-var _metalDom = __webpack_require__(7);
+var _metalDom = __webpack_require__(6);
 
 var _ComponentDataManager = __webpack_require__(25);
 
@@ -12163,7 +12140,7 @@ var _metal = __webpack_require__(0);
 
 var _metalComponent = __webpack_require__(4);
 
-var _metalState = __webpack_require__(6);
+var _metalState = __webpack_require__(5);
 
 var _metalState2 = _interopRequireDefault(_metalState);
 
